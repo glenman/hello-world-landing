@@ -7,7 +7,7 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('/images/hero.webp')",
+            "url('/hello-world-landing/images/hero.webp')",
         }}
       />
 
