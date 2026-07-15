@@ -79,15 +79,27 @@ Modern Engineering System
 采用组件驱动开发：
 
 ```
+Project
+
+↓
+
 Page
 
 ↓
 
-Components
+Section
 
 ↓
 
-Reusable UI
+UI Component
+
+↓
+
+Data
+
+↓
+
+Types
 ```
 
 

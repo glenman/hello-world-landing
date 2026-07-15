@@ -617,3 +617,29 @@ The HelloWorld project values:
 - Engineering Quality
 
 Every feature should improve the project without increasing unnecessary complexity.
+
+## Component Development Principle
+
+Every new page should follow:
+
+Page
+
+↓
+
+Section
+
+↓
+
+UI Component
+
+↓
+
+Data
+
+↓
+
+Types
+
+Avoid duplicated Tailwind styles.
+
+Prefer reusable UI components.

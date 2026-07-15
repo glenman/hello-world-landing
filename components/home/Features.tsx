@@ -1,91 +1,188 @@
-type Feature = {
-  icon: string;
-  title: string;
-  description: string;
-};
-
-const features: Feature[] = [
+const features = [
   {
+    title: "现代化架构",
+    description:
+      "采用最新 Web 技术体系，构建稳定、高性能、可扩展的应用基础。",
+    tags: ["Next.js", "React", "TypeScript"],
     icon: "🚀",
-    title: "创新技术",
-    description: "采用现代 Web 技术栈，构建高性能、可扩展的应用。",
   },
+
   {
-    icon: "🌍",
-    title: "全球连接",
-    description: "让创意突破地域限制，连接世界各地的用户。",
+    title: "智能连接",
+    description:
+      "通过先进技术连接人与世界，探索人工智能带来的无限可能。",
+    icon: "🌎",
   },
+
   {
-    icon: "⚡",
-    title: "极致性能",
-    description: "静态生成与现代构建工具，带来流畅的访问体验。",
-  },
-  {
-    icon: "🔒",
-    title: "安全可靠",
-    description: "稳定、可靠、安全，为每一次访问保驾护航。",
+    title: "持续进化",
+    description:
+      "不断优化体验，让产品随着时代变化持续成长。",
+    icon: "✨",
   },
 ];
 
+
 export default function Features() {
   return (
-    <section className="relative bg-slate-950 py-28">
-      {/* 背景光晕 */}
-      <div className="absolute left-20 top-20 h-72 w-72 rounded-full bg-indigo-600/20 blur-3xl" />
-      <div className="absolute right-10 bottom-10 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
+    <section
+      id="features"
+      className="relative overflow-hidden bg-slate-950 py-32"
+    >
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      {/* Background Glow */}
+
+      <div className="absolute left-1/3 top-0 h-72 w-72 rounded-full bg-indigo-500/10 blur-3xl" />
+
+      <div className="absolute bottom-0 right-1/4 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl" />
+
+
+      <div className="relative mx-auto max-w-[1440px] px-6">
+
+
+        {/* Header */}
+
         <div className="mx-auto max-w-3xl text-center">
-          <span className="rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2 text-sm text-indigo-300">
-            WHY CHOOSE US
-          </span>
 
-          <h2 className="mt-6 text-4xl font-bold text-white md:text-5xl">
-            探索无限可能
+
+          <div className="mb-6 inline-flex rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm text-white/70 backdrop-blur-xl">
+
+            ✨ Features
+
+          </div>
+
+
+          <h2 className="text-4xl font-black tracking-tight text-white md:text-6xl">
+
+            探索无限可能的
+
+            <span className="bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
+
+              技术世界
+
+            </span>
+
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-400">
-            我们致力于打造现代化、高性能且富有设计感的 Web
-            应用，为每一位用户提供卓越的体验。
+
+          <p className="mt-8 text-lg leading-8 text-white/60">
+
+            通过现代技术体系，
+            构建更加智能、高效、开放的未来体验。
+
           </p>
+
+
         </div>
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="
-                group
-                rounded-3xl
-                border
-                border-white/10
-                bg-white/5
-                p-8
-                backdrop-blur-md
-                transition-all
-                duration-300
-                hover:-translate-y-2
-                hover:border-indigo-400/50
-                hover:bg-white/10
-                hover:shadow-2xl
-                hover:shadow-indigo-500/20
-              "
-            >
-              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500 to-cyan-500 text-3xl">
-                {feature.icon}
+
+
+        {/* Feature Grid */}
+
+        <div className="mt-20 grid gap-8 lg:grid-cols-3">
+
+
+          {/* Main Card */}
+
+          <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-xl lg:col-span-2">
+
+
+            <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-indigo-500/20 blur-3xl transition group-hover:bg-indigo-500/30" />
+
+
+            <div className="relative">
+
+
+              <div className="text-5xl">
+
+                {features[0].icon}
+
               </div>
 
-              <h3 className="text-2xl font-semibold text-white">
-                {feature.title}
+
+              <h3 className="mt-8 text-3xl font-bold text-white">
+
+                {features[0].title}
+
               </h3>
 
-              <p className="mt-4 leading-7 text-slate-400">
-                {feature.description}
+
+              <p className="mt-5 max-w-xl text-lg leading-8 text-white/70">
+
+                {features[0].description}
+
               </p>
+
+
+
+              <div className="mt-8 flex flex-wrap gap-3">
+
+                {features[0].tags?.map((tag) => (
+
+                  <span
+                    key={tag}
+                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70"
+                  >
+
+                    {tag}
+
+                  </span>
+
+                ))}
+
+              </div>
+
+
             </div>
+
+
+          </div>
+
+
+
+
+          {/* Small Cards */}
+
+          {features.slice(1).map((item) => (
+
+            <div
+              key={item.title}
+              className="group rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition duration-300 hover:-translate-y-2"
+            >
+
+
+              <div className="text-4xl">
+
+                {item.icon}
+
+              </div>
+
+
+              <h3 className="mt-6 text-2xl font-bold text-white">
+
+                {item.title}
+
+              </h3>
+
+
+              <p className="mt-4 leading-7 text-white/60">
+
+                {item.description}
+
+              </p>
+
+
+            </div>
+
           ))}
+
+
         </div>
+
+
       </div>
+
+
     </section>
   );
 }

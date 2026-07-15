@@ -609,3 +609,39 @@ over
 quick implementation.
 
 Always think like a software engineer rather than only a code generator.
+
+## Current Development Stage
+
+Current Version:
+
+v0.2.0
+
+Current Focus:
+
+Design System
+
+Development Strategy:
+
+Design System First
+
+Landing Page Second
+
+Current Tasks:
+
+- Build UI Components
+
+- Build Theme
+
+- Build Data Layer
+
+- Refactor Hero
+
+- Refactor Features
+
+- Refactor Stats
+
+- Develop Showcase
+
+- Develop CTA
+
+- Develop Footer
